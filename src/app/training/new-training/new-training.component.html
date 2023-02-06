@@ -1,0 +1,40 @@
+<section fxLayout fxLayoutAlign="center">
+    <mat-card fxFlex="500px">
+        
+        <!-- Title -->
+            <mat-card-title fxLayoutAlign="center">
+                Start training
+            </mat-card-title>
+
+        <!-- Content -->
+            <mat-card-content fxLayoutAlign="center" fxLayoutGap="25px">
+                <!-- Content | form kontrola -->
+                <mat-form-field>
+                    <mat-select placeholder="Choose exercise:">
+                        
+                        <!-- Opcija 1 -->
+                        <mat-option value="walking">
+                            Walking
+                        </mat-option>
+                        
+                        <!-- Opcija 2 -->
+                        <mat-option value="Running">
+                            Running
+                        </mat-option>
+                        
+                        <!-- Opcija 3 -->
+                        <mat-option value="squats">
+                            Squats
+                        </mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+            </mat-card-content>
+
+        <!-- Actions -->
+            <mat-card-actions fxLayoutAlign="center">
+                <button type="submit" mat-raised-button color="primary" (click)="onStartTraining()">Start</button>
+            </mat-card-actions>
+
+    </mat-card>
+</section>

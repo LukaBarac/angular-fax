@@ -1,0 +1,33 @@
+/*
+
+Link ka temama
+https://material.angular.io/guide/theming
+na guglu moze: angular theming -> dovodi do istog rezultata
+
+
+Boje:
+https://material.io/design/color/the-color-system.html
+na guglu moze: the color system material design
+*/
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$my-theme-primary: mat-palette($mat-orange);
+$my-theme-accent: mat-palette($mat-blue, A200, A100, A400);
+$my-theme-warn: mat-palette($mat-red);
+
+$my-theme: mat-dark-theme($my-theme-primary,
+                            $my-theme-accent,
+                            $my-theme-warn);
+
+@include angular-material-theme($my-theme);
+
+/* 
+
+korak 0) stop servera
+korak 1) ukoliko se ne ucita tema automatski / ukoliko pukne kod / uraditi u terminalu: npm rebuild node-sass
+korak 2) pokrenuti server
+
+*/

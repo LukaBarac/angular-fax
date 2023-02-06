@@ -1,0 +1,39 @@
+/* #container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    width: 300px;
+    height: 300px;
+}
+
+#child1 {
+    background-color: #ba1414;
+}
+#child2 {
+    background-color: #27ba14;
+}
+#child3 {
+    background-color: #1467ba;
+}
+ */
+
+ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+     height: 100%;
+ }
+
+ mat-sidenav {
+     width: 200px;
+ }
+
+ a {
+     color: #ffffff;
+     text-decoration: none;
+ }
+
+ a:hover, a:active {
+     color: #dbdbdb;
+ }

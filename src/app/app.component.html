@@ -1,0 +1,79 @@
+<!-- Primer - dugme -->
+<!-- <section>
+    <button mat-raised-button color="primary">Klikni!</button>
+</section> -->
+
+<!-- 
+<section>
+    <button mat-icon-button color="warn">
+        <mat-icon>home</mat-icon>
+    </button>
+</section> -->
+
+<!-- Flex layout -->
+<!-- <section id="container">
+    <div id="child1" class="child"></div>
+    <div id="child2" class="child"></div>
+    <div id="child3" class="child"></div>
+</section> -->
+
+<mat-sidenav-container>
+
+  <!-- Navigacioni meni (sa leve strane, vertikalno) / sidenav -->
+  <mat-sidenav #sidenav opened="true">
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/signup" (click)="sidenav.close()">
+        <mat-icon>account_circle</mat-icon>
+        Signup
+      </a>
+      <a mat-list-item routerLink="/login" (click)="sidenav.close()">
+        <mat-icon>password</mat-icon>
+        Login
+      </a>
+      <a mat-list-item routerLink="/training" (click)="sidenav.close()">
+        <mat-icon>sports_gymnastics</mat-icon>
+        Training
+      </a>
+      <a mat-list-item routerLink="/" (click)="sidenav.close()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <!-- Ruter linkovi u sidenav-content-u / linija menija -->
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a routerLink="/">Logo</a>
+      </div>
+      <div fxFlex fxLayoutAlign="end" fxLayoutGap="15px" fxHide.xs>
+        <a routerLink="/signup">Signup</a>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/training">Training</a>
+      </div>
+
+
+      <!-- Pozivanje komponente profila korisnika (Dodatak 2) -->
+      <div fxFlex fxLayoutAlign="end" fxLayoutGap="10px" fxHide.xs>
+        <a routerLink="/signup">Signup</a>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/training">Training</a>
+        <button mat-raised-button color="warn" (click)="openProfile(this.userService.currentUser.id)">{{
+                this.userService.currentUser.email}}
+        </button>
+      </div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
